@@ -14,7 +14,13 @@
       {
         "title": "agent-client-tauri",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "decorations": false,
+        "resizable": false,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "center": true,
+        "visible": true
       }
     ],
     "security": {

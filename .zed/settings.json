@@ -1,0 +1,18 @@
+{
+  // Подхватывать env из `nix develop` через direnv shell hook,
+  // чтобы rust-analyzer видел RUST_SRC_PATH, PKG_CONFIG_PATH, LD_LIBRARY_PATH.
+  // Требует: установленный direnv, `direnv allow` в корне проекта
+  // и хук в шелле, напр. для bash в ~/.bashrc: eval "$(direnv hook bash)"
+  "load_direnv": "shell_hook",
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "cargo": {
+          // Отдельная target-директория для проверок LSP,
+          // чтобы не блокировать `cargo build` / `pnpm tauri dev`
+          "targetDir": true
+        }
+      }
+    }
+  }
+}
