@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "last_run": "2026-09-19T13:42:49.599149Z",
+    "root": "/home/vladyslav/Projects/agent-client-tauri",
+    "include_patterns": [
+      "src/**/*.tsx",
+      "src/**/*.ts",
+      "src/**/*.css",
+      "src-tauri/src/**/*.rs",
+      "src-tauri/*.rs",
+      "src-tauri/*.toml",
+      "src-tauri/*.json",
+      "src-tauri/capabilities/*.json",
+      "*.json",
+      "*.ts",
+      "*.nix",
+      "index.html"
+    ],
+    "exclude_patterns": [
+      "**/node_modules/**",
+      "src-tauri/target/**",
+      "src-tauri/gen/**",
+      "src-tauri/icons/**",
+      "dist/**",
+      "public/**",
+      "**/*.lock",
+      "pnpm-lock.yaml",
+      "*.md",
+      "**/*.test.*",
+      "**/*.spec.*"
+    ],
+    "exceptions": [
+      "README.md"
+    ]
+  },
+  "file_hashes": {
+    "README.md": "2806d68c0afde0b93c235a7db788a5b0",
+    "flake.nix": "eae7548174274e39a0a04be536b95cc3",
+    "index.html": "0d0f476d04137773fc2c3a8e82eeeb36",
+    "package.json": "c1bdca5099efb59e48cb5715a3fc75dd",
+    "src/App.css": "9c80612251ef6d98b11b8e892265fcbc",
+    "src/App.tsx": "40c05010ae502b5edf45542714302e49",
+    "src/main.tsx": "29425bc87312dae845525731673266c4",
+    "src/vite-env.d.ts": "0352474ba2918efe13895edbc3780d94",
+    "src-tauri/Cargo.toml": "ab70c54e0593bffe119a5d976dfa678a",
+    "src-tauri/build.rs": "1be34a5c61c2c35365de3dab14298f0b",
+    "src-tauri/capabilities/default.json": "d2b1ea61ac2075eb0d44587bf81ee127",
+    "src-tauri/capabilities/desktop.json": "e7004144927923e8949be2c7f5d1bba3",
+    "src-tauri/package.json": "ed9284729d6e1ef29e0ca51a8f22868c",
+    "src-tauri/src/lib.rs": "8604c7df8b41ed5bc6ab8b3b649c572d",
+    "src-tauri/src/main.rs": "a6ceee6bcb75b7df8bade44795c3be6f",
+    "src-tauri/tauri.conf.json": "a3d3571a46569e8a4264b27684fe41e9",
+    "tsconfig.json": "d6167f132974dd91c02900385bcea53a",
+    "tsconfig.node.json": "767b2e9abe6452170cdc399ca052cfbc",
+    "vite.config.ts": "0a1c1ef73facc5e0a2fe5c4e67230df4"
+  },
+  "folder_hashes": {
+    "src-tauri/capabilities": "154ec1a95018338f1d4a32514b642cd6",
+    ".": "afd2a70b71807c8276528be77279b2db",
+    "src": "a61154b2f8984935835a3705298c1f5f",
+    "src-tauri": "cfe56b34407aa4b29ffaa75818e1a037",
+    "src-tauri/src": "f83ecc5eb15928babce34877a77c8802"
+  }
+}
