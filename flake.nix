@@ -29,7 +29,7 @@
           pango
           webkitgtk_4_1
           # Трей-иконка (ayatana заменил старый appindicator в Tauri v2)
-          libayatana-appindicator
+          # libayatana-appindicator
         ];
 
         linuxOnly =
@@ -54,6 +54,10 @@
             rustfmt
             clippy
             rust-analyzer
+            # Исходники std для rust-analyzer (см. RUST_SRC_PATH ниже).
+            # Корень деривации уже является уровнем `library/` (core/, std/, alloc/),
+            # поэтому RUST_SRC_PATH указывает прямо на него.
+            rustPlatform.rustLibSrc
 
             # Frontend (React/Vue/Svelte)
             nodejs_22
@@ -62,12 +66,14 @@
           ] ++ linuxOnly;
 
           shellHook = ''
+            export GDK_BACKEND="wayland"
             # --- WebKit2GTK под NixOS: без этого черный экран / краш webview ---
             export WEBKIT_DISABLE_DMABUF_RENDERER=1
 
             # --- Rust: исходники для rust-analyzer ---
             export RUST_SRC_PATH="${pkgs.rustPlatform.rustLibSrc}"
-
+            
+            
             ${pkgs.lib.optionalString pkgs.stdenv.hostPlatform.isLinux ''
               export LD_LIBRARY_PATH="${pkgs.lib.makeLibraryPath linuxLibs}:$LD_LIBRARY_PATH"
               export PKG_CONFIG_PATH="${pkgs.lib.makeSearchPath "lib/pkgconfig" linuxLibs}:$PKG_CONFIG_PATH"

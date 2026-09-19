@@ -14,3 +14,6 @@ Tauri v2 + React + pnpm. Overlay chat triggered by a global hotkey (similar to a
 
 ## Commands
 pnpm tauri dev / pnpm build / cargo test
+
+## Rules commenter 
+- Comment into code mush be always on english
